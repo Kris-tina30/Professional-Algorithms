@@ -30,11 +30,23 @@
 let array = [3, 5, 7, 8, 1, 6, 4, 9, 2];
 
 function isMagicSquare(arr) {
+  let sum = 15;
   let diagonal1 = array[0] + array[4] + array[8];
   let diagonal2 = array[2] + array[4] + array[6];
-  if (diagonal1 === diagonal2) {
-    return true;
+  if (diagonal1 !== sum && diagonal2 !== sum) {
+    return false;
   }
-  return false;
+  for (let i = 0; i < array.length; i += 3) {
+    if (arr[i] + arr[i + 1] + arr[i + 2] !== sum) {
+      return false;
+    }
+  }
+  for (let i = 0; i <= 2; i++) {
+    if (arr[i] + arr[i + 3] + arr[i + 6] !== sum) {
+      return false;
+    }
+  }
+
+  return true;
 }
 console.log(isMagicSquare(array));
