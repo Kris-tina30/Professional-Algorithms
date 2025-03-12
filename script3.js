@@ -15,10 +15,18 @@
 // the grid: assume this to be true.
 
 //declare function isMagicSquare, arr as paramneter
-//declare 2 variables to hold sum of diagonals
-// condition if diagonals is equal each other
+//declare 3 variables to hold sum of diagonals and sum equel to 15
+// condition if each diagonals is not equal  to 15
+//return false
+//if not =>
+//use second for loop to check the rows (step 3)
+//condition to check if sum of rows is not equel to 15
+//return false
+//use third for loop to check the colomns (each 3 index)
+//condition to check if sum of colomns is not equel to 15
+//return false
+//if all conditions is true
 //return true
-//if not => return false
 
 // [8, 1, 6,
 // 3, 5, 7,
